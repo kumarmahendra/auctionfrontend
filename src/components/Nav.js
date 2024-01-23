@@ -27,9 +27,9 @@ const Nav = (props) => {
             <RouterLink to='/dashboard' style={{ textDecoration: 'none' }}>
               <Button>Dashboard</Button>
             </RouterLink>
-            <RouterLink to='/postad' style={{ textDecoration: 'none' }}>
+            {props?.isAdmin? <RouterLink to='/postad' style={{ textDecoration: 'none' }}>
               <Button>Post Ad</Button>
-            </RouterLink>
+            </RouterLink>:null}
           </div>
         )}
       </div>
@@ -58,6 +58,7 @@ const Nav = (props) => {
 
 const mapStateToProps = (state) => ({
   isAuth: state.auth.isAuthenticated,
+  isAdmin: state.auth.isAdmin,
 });
 
 export default connect(mapStateToProps, { logout })(Nav);

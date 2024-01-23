@@ -107,10 +107,7 @@ const Login = (props) => {
             Don't have an account? <Link to='/register'>Sign Up</Link>
           </p>
           <div className='auth__separator' />
-          <p>To use the app without login:</p>
-          <Button variant='contained' className='auth__button' onClick={props.skipLogin}>
-            Skip
-          </Button>
+          
         </div>
       </section>
     </Fragment>

@@ -20,9 +20,18 @@ export default function authReduce(state = initialState, action) {
 
   switch (type) {
     case USER_LOADED:
+       let isAdminUser=false
+       if(payload.user?.username==='admin')
+       {
+        isAdminUser=true
+       }
+       else{
+        isAdminUser=false
+       }
       return {
         ...state,
         isAuthenticated: true,
+        isAdmin: isAdminUser,
         loading: false,
         user: payload.user,
       };
