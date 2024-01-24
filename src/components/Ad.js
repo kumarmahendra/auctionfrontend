@@ -252,7 +252,7 @@ const Ad = (props) => {
                     {!ownerAd && (
                       <Box sx={bidContainer}>
                         <TextField
-                          label='$'
+                          label='₹'
                           id='bid-price'
                           size='small'
                           onChange={(e) => {
