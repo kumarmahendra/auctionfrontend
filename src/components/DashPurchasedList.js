@@ -61,7 +61,7 @@ const DashPurchasedList = ({ ads }) => {
             {ads.slice(firstAdIndex, lastAdIndex).map((ad) => (
               <TableRow key={ad._id}>
                 <TableCell>{ad.productName}</TableCell>
-                <TableCell align='right'>${ad.currentPrice.$numberDecimal}</TableCell>
+                <TableCell align='right'>₹ {ad.currentPrice.$numberDecimal}</TableCell>
                 <TableCell align='right'>{getGMTTime(ad.updatedAt)}</TableCell>
                 <TableCell align='right'>
                   <Button

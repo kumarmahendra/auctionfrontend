@@ -55,7 +55,7 @@ function MediaCard(props) {
               {props.ad.productName}
             </Typography>
             <Typography variant='body2' color='text.secondary'>
-              Price: $ {props.ad.currentPrice.$numberDecimal}
+              Price: ₹ {props.ad.currentPrice.$numberDecimal}
             </Typography>
             <Typography variant='body2' color='text.secondary'>
               Remaining: {secondsToHmsShort(props.ad.timer)}

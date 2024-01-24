@@ -242,7 +242,7 @@ const Ad = (props) => {
                       Time remaining: {getTimeRemaining()}
                     </Typography>
                     <Typography variant='body1'>
-                      Current price: ${props.adDetails.currentPrice.$numberDecimal}
+                      Current price: ₹ {props.adDetails.currentPrice.$numberDecimal}
                     </Typography>
                     <Typography variant='body1'>
                       Current bidder: {props.highestBid && props.highestBid.user.username}
